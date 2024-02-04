@@ -1,0 +1,53 @@
+.searchBoxMobile {
+  width: 360px;
+  height: 30px;
+  border: 4px solid peachpuff;
+  border-radius: 50px;
+  margin: 10px;
+
+  table {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    position: relative;
+
+    input {
+      border: none;
+      width: 100%;
+      height: 100%;
+      padding: 0px 5px;
+      border-radius: 50px;
+      font-weight: 500;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .searchResults {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      border: 1px solid #ccc;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+      border: none;
+      li {
+        padding: 8px;
+        cursor: pointer;
+
+        .link {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      li:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}

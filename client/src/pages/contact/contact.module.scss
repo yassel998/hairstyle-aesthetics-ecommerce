@@ -1,0 +1,139 @@
+.contact {
+  margin: 40px 200px;
+
+  .container {
+    .title {
+      text-align: center;
+
+      .heading {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .subheading {
+        font-size: 14px;
+        color: rgb(89, 89, 89);
+        line-height: 34px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 5rem;
+      margin-top: 7rem;
+      margin-bottom: 2rem;
+      justify-content: space-between;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 50%;
+        background-color: black;
+        left: 50%;
+        // top: 30%;
+        transform: translateX(-50%);
+      }
+      .left {
+        width: 100%;
+        max-width: 500px;
+        .info {
+          padding: 1.6rem;
+          background-color: rgb(249, 218, 42);
+          display: flex;
+          align-items: center;
+          gap: 1.8rem;
+          border-radius: 8px;
+          margin-bottom: 1.5rem;
+
+          .icon {
+            color: black;
+            background-color: rgb(243, 228, 169);
+            padding: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+          }
+
+          .text {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        max-width: 500px;
+        form {
+          width: 100%;
+
+          .form {
+            width: 100%;
+            margin-bottom: 1.5rem;
+
+            label {
+              font-size: 1.1rem;
+              font-weight: 450;
+            }
+            input,
+            textarea {
+              width: 100%;
+              font-size: 1rem;
+              padding: 0.8rem;
+              color: black;
+              background-color: rgb(223, 222, 222);
+              outline: none;
+              border: none;
+              border-radius: 8px;
+              margin-top: 1rem;
+            }
+            textarea {
+              min-height: 250px;
+              resize: vertical;
+            }
+          }
+          button {
+            background-color: rgb(211, 210, 210);
+            color: black;
+            font-size: 1.1rem;
+            display: inline-block;
+            outline: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: gold;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    .map {
+      background: url(../../../public/img/map.png);
+      background-size: cover;
+
+      .container {
+        position: relative;
+        min-height: 400px;
+
+        .card {
+          position: absolute;
+          right: 4%;
+          bottom: 36%;
+          padding: 1rem;
+          background: #879bd0;;
+          width: 100%;
+          max-width: 300px;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}

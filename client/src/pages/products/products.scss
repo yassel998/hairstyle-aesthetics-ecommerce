@@ -1,0 +1,133 @@
+.products {
+  padding: 30px 50px;
+  display: flex;
+
+  @media (max-width: 680px) {
+    padding: 15px 10px;
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    position: sticky;
+    height: 100%;
+    top: 50px;
+
+    .filterItem {
+      margin-bottom: 30px;
+
+      h2 {
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .inputItem {
+        margin-bottom: 10px;
+        label {
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 3;
+
+    .row {
+      display: flex;
+      margin-bottom: 10px;
+      .cat {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+      }
+      .category-drawer {
+        width: 360px; 
+        height: 100%;
+        background-color: #cdcbcb; 
+        position: fixed;
+        top: 0;
+        right: -360px; 
+        transition: right 0.3s ease-in-out;
+        z-index: 1;
+
+        .topDrawer {
+          display: flex;
+          background-color: rgb(252, 233, 209);
+          height: 60px;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          .leftDrawer {
+            justify-content: center;
+            margin-left: 20px;
+          }
+
+          .rightDrawer {
+            justify-content: center;
+            display: flex;
+            margin-right: 20px;
+
+            .ok {
+              background-color: white;
+              padding: 8px;
+            }
+
+            .resetDrawer {
+              padding: 8px;
+            }
+          }
+        }
+
+        .bottomDrawer {
+          margin-left: 20px;
+          .filterItemDr {
+            margin-bottom: 20px;
+
+            input[type="checkbox"] {
+              transform: scale(1.4); /*  make the input checkbox bigger*/
+            }
+            h3 {
+              font-weight: 650;
+              margin-bottom: 20px;
+            }
+
+            .inputItemDr {
+              margin-bottom: 10px;
+              label {
+                margin-left: 10px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        &.open {
+          right: 0;
+        }
+      }
+      .sort {
+        flex: 1;
+        margin-left: 10px;
+        select {
+          width: 100%;
+          height: 45px;
+          border: 1px solid #ccc;
+          padding-left: 2px;
+        }
+      }
+    }
+    .catImg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+
+      @media (max-width: 680px) {
+        height: 230px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.featuredProducts {
+  margin: 100px 80px;
+  @media (max-width: 680px) {
+    margin: 50px 12px;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @media (max-width: 680px) {
+      h1 {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    .carousel-container {
+      width: 100%;
+    }
+  }
+}

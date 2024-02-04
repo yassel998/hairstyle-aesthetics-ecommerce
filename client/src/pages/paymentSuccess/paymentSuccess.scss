@@ -1,0 +1,57 @@
+.paymentSuccess {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 40px;
+  h1 {
+    color: #4caf50;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .message,
+  .inquiry,
+  .encouragement {
+    color: #333;
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .next {
+    h3 {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .continue {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: #066ddb;
+      color: white;
+    }
+  }
+}

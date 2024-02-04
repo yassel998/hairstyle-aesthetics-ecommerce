@@ -1,0 +1,155 @@
+.product {
+  padding: 20px 50px;
+  display: flex;
+  gap: 50px;
+
+  @media (max-width: 680px) {
+    padding: 2px 10px;
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 3;
+    display: flex;
+    gap: 6px;
+
+    @media (max-width: 680px) {
+      flex-direction: column-reverse;
+    }
+    .images {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: 110px;
+        object-fit: cover;
+        cursor: pointer;
+        margin-bottom: 10px;
+        @media (max-width: 680px) {
+          height: 80px;
+          width: 25%;
+          object-fit: cover;
+          margin-bottom: 2px;
+        }
+      }
+    }
+    .mainImg {
+      flex: 7;
+
+      img {
+        width: 100%;
+        max-height: 900px;
+        object-fit: cover;
+        @media (max-width: 680px) {
+          max-height: 500px;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: 680px) {
+      h3 {
+        font-size: 15px;
+      }
+      h1 {
+        font-size: 18px;
+      }
+    }
+    .showText {
+      cursor: pointer;
+      color: #2879fe;
+      text-decoration: underline;
+    }
+    .prices {
+      display: flex;
+      gap: 20px;
+      .oldPrice {
+        font-size: 34px;
+        font-weight: 500;
+        color: gray;
+        text-decoration: line-through;
+        @media (max-width: 680px) {
+          font-size: 25px;
+        }
+      }
+
+      .promoPrice {
+        font-size: 34px;
+        font-weight: 500;
+        color: red;
+        @media (max-width: 680px) {
+          font-size: 25px;
+        }
+      }
+
+      .regularPrice {
+        font-size: 34px;
+        font-weight: 700;
+        color: rgb(160, 137, 5);
+        @media (max-width: 680px) {
+          font-size: 25px;
+        }
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        font-size: 20px;
+        background-color: rgb(223, 223, 223);
+        &:hover {
+          color: rgb(223, 223, 223);
+          background-color: rgb(85, 85, 85);
+          transition: ease 0.5s;
+        }
+      }
+    }
+
+    .add {
+      width: 250px;
+      padding: 10px;
+      background-color: rgb(245, 218, 68);
+      color: rgb(90, 90, 90);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      border: none;
+      font-weight: 500;
+
+      &:hover {
+        background-color: rgb(183, 183, 183);
+        color: rgb(83, 71, 3);
+        transition: ease 0.6s;
+      }
+
+      &[disabled] {
+        cursor: not-allowed;
+        background-color: rgb(223, 223, 223);
+        color: rgb(23, 23, 23);
+      }
+    }
+  }
+}
