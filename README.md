@@ -15,3 +15,5 @@ React: Utilized for its efficient, declarative, and flexible JavaScript library,
 SCSS: Leveraged for its powerful features that make writing CSS more efficient and organized.
 Redux Toolkit: Employed for state management, simplifying the process of writing robust and scalable application state logic.
 Strapi: Chosen for its headless CMS capabilities, allowing for easy content management and API integration.
+
+note : Please note that this e-commerce web application is a work in progress.
