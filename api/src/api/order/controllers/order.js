@@ -29,6 +29,12 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
               unit_amount: Math.round(item.price * 100),
             },
             quantity: product.quantity,
+            adjustable_quantity: {
+              // Enable quantity
+              enabled: true,
+              minimum: 1, // minimum quantity
+              // maximum: 10, // i can also add a maximal
+            },
           };
         })
       );
