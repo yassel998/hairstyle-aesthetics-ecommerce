@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import styles from "./searchbox.module.scss";
 import useFetch from "../../hooks/useFetch";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const SearchBox = ({ open, onClose }) => {
@@ -59,19 +59,39 @@ const SearchBox = ({ open, onClose }) => {
 
               {filteredData.slice(0, 8).map((item) => (
                 <tr key={item?.id}>
-                  {/* <Link className={styles.link} to={`/product/${item.id}`}> */}
-                  <td>{item?.attributes?.title}</td>
-                  <td>{item?.attributes?.brand}</td>
                   <td>
-                    <img
-                      src={
-                        process.env.REACT_APP_UPLOAD_URL +
-                        item?.attributes?.img1?.data?.attributes?.url
-                      }
-                      alt={item?.attributes?.title}
-                    />
+                    <Link
+                      className={styles.link}
+                      to={`/product/${item.id}`}
+                      onClick={onClose}
+                    >
+                      {item?.attributes?.title}
+                    </Link>
                   </td>
-                  {/* </Link> */}
+                  <td>
+                    <Link
+                      className={styles.link}
+                      to={`/product/${item.id}`}
+                      onClick={onClose}
+                    >
+                      {item?.attributes?.brand}
+                    </Link>
+                  </td>
+                  <td>
+                    <Link
+                      className={styles.link}
+                      to={`/product/${item.id}`}
+                      onClick={onClose}
+                    >
+                      <img
+                        src={
+                          process.env.REACT_APP_UPLOAD_URL +
+                          item?.attributes?.img1?.data?.attributes?.url
+                        }
+                        alt={item?.attributes?.title}
+                      />
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
